@@ -5,59 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Öz Favori Koltuk Yıkama | Profesyonel Temizlik</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        header { background: linear-gradient(135deg, #0056b3, #0091ff); color: white; padding: 40px 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
-        .main-container { display: flex; flex-direction: column; align-items: center; padding: 30px 20px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+        header { background: #0056b3; color: white; padding: 60px 20px; text-align: center; }
+        .slogan-box { border: 2px solid rgba(255,255,255,0.3); display: inline-block; padding: 10px 20px; margin-top: 15px; font-weight: bold; }
         
-        /* Liste Kutusu - Kesin Hizalama Burası */
-        .hizmet-kutusu { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); width: 100%; max-width: 400px; margin: 20px 0; }
-        .hizmet-kutusu h2 { text-align: center; color: #0056b3; margin-top: 0; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        .section-title { text-align: center; margin: 40px 0 20px; font-size: 2em; color: #0056b3; }
         
-        .liste { display: table; margin: 0 auto; } /* Listeyi ortalar ama içini korur */
-        .satir { display: table-row; }
-        .ikon { display: table-cell; padding: 8px 10px; color: #28a745; font-size: 1.2em; vertical-align: middle; }
-        .metin { display: table-cell; padding: 8px 0; font-size: 1.1em; font-weight: 500; vertical-align: middle; }
-
-        .btn-whatsapp { background-color: #25d366; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2em; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); margin-top: 20px; }
-        .btn-whatsapp:hover { transform: scale(1.05); }
-        footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; }
+        /* Hizmet Kartları */
+        .services-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: white; border-radius: 15px; width: 300px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; }
+        .service-card-body { padding: 20px; text-align: center; }
+        .service-card-body h3 { margin: 0 0 10px; color: #0056b3; }
+        
+        /* WhatsApp Sabit Buton */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<header style="background: linear-gradient(135deg, #004a99, #007bff); padding: 60px 20px; text-align: center; color: white;">
-    <h1 style="font-size: 3.2em; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">ÖZ FAVORİ</h1>
-    <div style="font-size: 1.4em; margin-top: 15px; font-weight: bold; border-top: 2px solid rgba(255,255,255,0.4); border-bottom: 2px solid rgba(255,255,255,0.4); display: inline-block; padding: 10px 30px; text-transform: uppercase;">
-        KOLTUK YIKAMA / PROFESYONEL TEMİZLİK
-    </div>
+<header>
+    <h1 style="margin:0; font-size: 3em;">ÖZ FAVORİ</h1>
+    <div class="slogan-box">KOLTUK YIKAMA / PROFESYONEL TEMİZLİK</div>
 </header>
 
+<div class="section-title">Hizmetlerimiz</div>
 
-<div class="main-container">
-    <div class="hizmet-kutusu">
-        <h2>Neler Yapıyoruz?</h2>
-        <div class="liste">
-            <div class="satir"><div class="ikon">✅</div><div class="metin">Yerinde Koltuk Yıkama</div></div>
-            <div class="satir"><div class="ikon">✅</div><div class="metin">Yerinde Stor Perde Yıkama</div></div>
-            <div class="satir"><div class="ikon">✅</div><div class="metin">Yerinde Halı Yıkama</div></div>
-            <div class="satir"><div class="ikon">✅</div><div class="metin">Yerinde Yatak/Baza Yıkama</div></div>
-            <div class="satir"><div class="ikon">✅</div><div class="metin">Araç Koltuğu Yıkama</div></div>
+<div class="services-container">
+    <!-- Kart 1 -->
+    <div class="service-card">
+        <img src="https://unsplash.com" alt="Koltuk Yıkama">
+        <div class="service-card-body">
+            <h3>Koltuk Yıkama</h3>
+            <p>Buharlı ve derinlemesine temizlik ile koltuklarınız ilk günkü gibi.</p>
+        </div>
+    </div>
+    
+    <!-- Kart 2 -->
+    <div class="service-card">
+        <img src="https://unsplash.com" alt="Yatak Yıkama">
+        <div class="service-card-body">
+            <h3>Yatak ve Baza</h3>
+            <p>Anti-alerjik vakumlu temizlik ile sağlıklı bir uyku alanı sunuyoruz.</p>
         </div>
     </div>
 
-    <a href="https://wa.me" class="btn-whatsapp">
-        💬 WhatsApp'tan Bilgi Al
-    </a>
-
-    <a href="tel:05055984487" style="margin-top: 20px; color: #0056b3; font-weight: bold; text-decoration: none; font-size: 1.1em;">
-        📞 Hemen Ara: 0505 598 44 87
-    </a>
+    <!-- Kart 3 -->
+    <div class="service-card">
+        <img src="https://unsplash.com" alt="Araç Temizliği">
+        <div class="service-card-body">
+            <h3>Araç Koltuğu</h3>
+            <p>Arabanızın iç mekan hijyenini profesyonel ekipmanlarla sağlıyoruz.</p>
+        </div>
+    </div>
 </div>
 
-<footer>
-    &copy; 2024 Öz Favori Koltuk Yıkama <br> Temizliğin Favori Adresi
+<div style="text-align: center; padding: 50px 20px; background: #e9ecef;">
+    <h2>Bize Ulaşın</h2>
+    <p style="font-size: 1.2em;">Ücretsiz fiyat bilgisi ve randevu için hemen arayın.</p>
+    <a href="tel:05055984487" style="font-size: 1.5em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
+</div>
+
+<a href="https://wa.me" class="wa-float" target="_blank">💬</a>
+
+<footer style="text-align: center; padding: 20px; background: #333; color: white;">
+    © 2024 Öz Favori Koltuk Yıkama
 </footer>
 
 </body>
 </html>
+
