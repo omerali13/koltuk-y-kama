@@ -5,74 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Öz Favori Koltuk Yıkama | Profesyonel Temizlik</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
-        header { background: #0056b3; color: white; padding: 60px 20px; text-align: center; }
-        .slogan-box { border: 2px solid rgba(255,255,255,0.3); display: inline-block; padding: 10px 20px; margin-top: 15px; font-weight: bold; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #333; scroll-behavior: smooth; }
         
-        .section-title { text-align: center; margin: 40px 0 20px; font-size: 2em; color: #0056b3; }
+        /* NAVBAR */
+        nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-weight: bold; color: #0056b3; font-size: 1.5em; text-decoration: none; }
+        .nav-links { list-style: none; display: flex; margin: 0; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+
+        /* HEADER */
+        header { background: #0056b3; color: white; padding: 80px 20px; text-align: center; }
+
+        /* HİZMETLER BÖLÜMÜ (GÖRSELDEKİ TASARIM) */
+        section { padding: 60px 10%; text-align: center; }
+        .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
         
-        /* Hizmet Kartları */
-        .services-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
-        .service-card { background: white; border-radius: 15px; width: 300px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-card img { width: 100%; height: 200px; object-fit: cover; }
-        .service-card-body { padding: 20px; text-align: center; }
-        .service-card-body h3 { margin: 0 0 10px; color: #0056b3; }
+        .hizmet-kart { 
+            background: white; border-radius: 15px; padding: 40px 30px; width: 300px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); position: relative; 
+            text-align: left; transition: 0.3s; border: 1px solid #eef2f6;
+        }
+        .hizmet-kart:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
         
-        /* WhatsApp Sabit Buton */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        /* NUMARALANDIRMA (01, 02...) */
+        .numara { 
+            width: 50px; height: 50px; border: 2px dashed #0056b3; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            color: #0056b3; font-weight: bold; margin-bottom: 20px; font-size: 1.2em;
+        }
+        
+        .hizmet-kart h3 { color: #002a5c; margin-bottom: 15px; font-size: 1.4em; }
+        .hizmet-kart p { color: #666; line-height: 1.6; font-size: 0.95em; }
+
+        /* WHATSAPP */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; text-align: center; font-size: 30px; display: flex; align-items: center; justify-content: center; text-decoration: none; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
 
+<nav>
+    <a href="#" class="logo">ÖZ FAVORİ</a>
+    <ul class="nav-links">
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+</nav>
+
 <header>
-    <h1 style="margin:0; font-size: 3em;">ÖZ FAVORİ</h1>
-    <div class="slogan-box">KOLTUK YIKAMA / PROFESYONEL TEMİZLİK</div>
+    <h1>ÖZ FAVORİ KOLTUK YIKAMA</h1>
+    <p>Profesyonel Temizlikte Favori Adresiniz</p>
 </header>
 
-<div class="section-title">Hizmetlerimiz</div>
-
-<div class="services-container">
-    <!-- Kart 1 -->
-    <div class="service-card">
-        <img src="https://unsplash.com" alt="Koltuk Yıkama">
-        <div class="service-card-body">
-            <h3>Koltuk Yıkama</h3>
-            <p>Buharlı ve derinlemesine temizlik ile koltuklarınız ilk günkü gibi.</p>
+<section id="hizmetler">
+    <h2 style="font-size: 2.5em; color: #002a5c;">Hizmetlerimiz</h2>
+    <div class="hizmet-grid">
+        
+        <!-- KART 01 -->
+        <div class="hizmet-kart">
+            <div class="numara">01</div>
+            <h3>Oturma Grubu Yıkama</h3>
+            <p>Detaylı ve buharlı temizlik ile daha hijyenik ve sağlıklı bir hizmet sunarak yaşam kalitenizi artırıyoruz.</p>
         </div>
-    </div>
-    
-    <!-- Kart 2 -->
-    <div class="service-card">
-        <img src="https://unsplash.com" alt="Yatak Yıkama">
-        <div class="service-card-body">
-            <h3>Yatak ve Baza</h3>
-            <p>Anti-alerjik vakumlu temizlik ile sağlıklı bir uyku alanı sunuyoruz.</p>
+
+        <!-- KART 02 -->
+        <div class="hizmet-kart">
+            <div class="numara" style="border-color: #00c4cc; color: #00c4cc;">02</div>
+            <h3>Yatak Ve Baza Yıkama</h3>
+            <p>Yatakların her yıl milyonlarca deri hücresi barındırdığını biliyor muydunuz? Buharlı yıkama ile artık endişelenmeyin.</p>
         </div>
-    </div>
 
-    <!-- Kart 3 -->
-    <div class="service-card">
-        <img src="https://unsplash.com" alt="Araç Temizliği">
-        <div class="service-card-body">
-            <h3>Araç Koltuğu</h3>
-            <p>Arabanızın iç mekan hijyenini profesyonel ekipmanlarla sağlıyoruz.</p>
+        <!-- KART 03 -->
+        <div class="hizmet-kart">
+            <div class="numara" style="border-color: #0056b3; color: #0056b3;">03</div>
+            <h3>Yerinde Halı Yıkama</h3>
+            <p>Halılarınızı bekleme derdine son. Ekibimiz halılarınızı yerinde yıkayarak aynı gün kullanım fırsatı sunuyor.</p>
         </div>
+
+        <!-- KART 04 -->
+        <div class="hizmet-kart">
+            <div class="numara" style="border-color: #25d366; color: #25d366;">04</div>
+            <h3>Cafe | Restoran</h3>
+            <p>Cafe ve restoranlarda özellikle görünmeyen virüs ve bakterilere karşı profesyonel ekipmanlarla hizmetinizdeyiz.</p>
+        </div>
+
+        <!-- KART 05 -->
+        <div class="hizmet-kart">
+            <div class="numara" style="border-color: #6f42c1; color: #6f42c1;">05</div>
+            <h3>Otel | Yat</h3>
+            <p>Müşterilerinize daha hijyenik ve konforlu bir alan sunmanız için profesyonel temizlik çözümleri sağlıyoruz.</p>
+        </div>
+
+        <!-- KART 06 -->
+        <div class="hizmet-kart">
+            <div class="numara" style="border-color: #fd7e14; color: #fd7e14;">06</div>
+            <h3>Ofis | Ev</h3>
+            <p>Ofis ve ev içerisinde bulunan sandalye, koltuk ve her türlü döşemeyi Öz Favori güvencesi ile temizletin.</p>
+        </div>
+
     </div>
-</div>
+</section>
 
-<div style="text-align: center; padding: 50px 20px; background: #e9ecef;">
-    <h2>Bize Ulaşın</h2>
-    <p style="font-size: 1.2em;">Ücretsiz fiyat bilgisi ve randevu için hemen arayın.</p>
-    <a href="tel:05055984487" style="font-size: 1.5em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
-</div>
+<section id="iletisim" style="background: white;">
+    <h2>Hemen Randevu Alın</h2>
+    <a href="tel:05055984487" style="font-size: 2em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
+</section>
 
-<a href="https://wa.me" class="wa-float" target="_blank">💬</a>
+<a href="https://wa.me" class="wa-float">💬</a>
 
-<footer style="text-align: center; padding: 20px; background: #333; color: white;">
+<footer style="padding: 30px; text-align: center; background: #222; color: white;">
     © 2024 Öz Favori Koltuk Yıkama
 </footer>
 
 </body>
 </html>
-
