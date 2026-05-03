@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özfavori Koltuk Yıkama | İstanbul Profesyonel Temizlik</title>
-    <!-- İkon kütüphanesi eklendi -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
         nav { background: white; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         .nav-left { display: flex; align-items: center; }
+        .logo-box { text-align: center; }
         .logo-box img { height: 75px; width: auto; }
-        .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
+        .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
         .header-phone { display: flex; align-items: center; gap: 12px; color: #000000; font-weight: 800; font-size: 1.5em; text-decoration: none; border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; }
         .phone-icon-green { color: #25d366; font-size: 1.1em; }
         .nav-right { display: flex; align-items: center; gap: 15px; }
@@ -20,32 +20,27 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.85em; }
         .btn-randevu { background-color: #0056b3; color: white !important; padding: 12px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,86,179,0.3); text-decoration: none; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
         
-        /* Hero (Kapak) Bölümü */
-        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('logo2.jpg'); background-size: cover; background-position: center; height: 500px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-        .hero-content h1 { font-size: 3em; margin: 0; }
-        .hero-content p { font-size: 1.4em; }
+        header { background: url('logo2.jpg'); background-size: cover; background-position: center; height: 500px; }
 
-        section { padding: 60px 10%; text-align: center; }
+        section { padding: 80px 10%; text-align: center; }
         .section-title { font-size: 2.2em; color: #002a5c; margin-bottom: 40px; }
         
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { background: white; border-radius: 20px; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; transition: 0.3s; }
         .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
         
-        /* Hizmet Bölgeleri */
-        .bolge-konteyner { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
-        .bolge-kart { background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); flex: 1; min-width: 300px; }
-        .bolge-kart h3 { color: #0056b3; border-bottom: 2px solid #f1f4f8; padding-bottom: 10px; }
-        .bolge-listesi { font-size: 0.9em; line-height: 1.8; color: #666; }
+        .bolge-konteyner { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 30px; }
+        .bolge-kart { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); width: 250px; }
+        .bolge-kart h3 { color: #0056b3; margin: 0; }
 
         .wa-float { position: fixed; bottom: 50px; right: 30px; background-color: #25d366; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 9999; box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; border: 2px solid white; }
         .wa-float img { width: 32px; height: 32px; }
+        
         footer { padding: 40px; background: #222; color: white; text-align: center; }
 
         @media (max-width: 768px) { 
             nav { flex-direction: column; gap: 15px; } 
-            .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.2em; }
-            .hero-content h1 { font-size: 2em; }
+            .header-phone { border-left: none; padding-left: 0; margin-left: 0; }
         }
     </style>
 </head>
@@ -54,7 +49,7 @@
 <nav>
     <div class="nav-left">
         <div class="logo-box">
-            <a href="#"><img src="logo.jpg" alt="Özfavori Logo"></a>
+            <a href="#"><img src="logo.jpg" alt="Logo"></a>
             <div class="logo-slogan">PROFESYONEL TEMİZLİK</div>
         </div>
         <a href="tel:05055984487" class="header-phone">
@@ -64,62 +59,57 @@
     <div class="nav-right">
         <ul class="nav-links">
             <li><a href="#anasayfa">Anasayfa</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
             <li><a href="#hizmetler">Hizmetler</a></li>
             <li><a href="#bolgeler">Hizmet Bölgeleri</a></li>
         </ul>
-        <a href="https://wa.me" target="_blank" class="btn-randevu">WhatsApp Randevu</a>
+        <a href="https://wa.me" target="_blank" class="btn-randevu">Randevu Al</a>
     </div>
 </nav>
 
-<header id="anasayfa">
-    <div class="hero-content">
-        <h1>Özfavori Koltuk Yıkama</h1>
-        <p>İstanbul'un Her Noktasına %100 Hijyen ve Profesyonel Çözümler</p>
+<header id="anasayfa"></header>
+
+<section id="hakkimizda" style="background: white;">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
+        <div style="flex: 1; min-width: 300px; max-width: 450px;">
+            <!-- Hakkımızda Resmi Daha Sonra Buraya Gelecek -->
+            <img src="hakkimizda1.jpg" alt="Hakkımızda" style="width:100%; border-radius:20px;">
+        </div>
+        <div style="flex: 1.5; min-width: 300px;">
+            <h2 style="font-size: 2.2em; color: #002a5c;">Hakkımızda</h2>
+            <!-- Hakkımızda Yazısı Daha Sonra Buraya Gelecek -->
+            <p><strong>Özfavori Koltuk Yıkama</strong> olarak İstanbul genelinde profesyonel ekipmanlarımızla hizmet vermekteyiz.</p>
+        </div>
     </div>
-</header>
+</section>
 
 <section id="hizmetler" style="background: #f1f4f8;">
-    <h2 class="section-title">Neler Yapıyoruz?</h2>
+    <h2 class="section-title">Hizmetlerimiz</h2>
     <div class="hizmet-grid">
-        <div class="hizmet-kart"><img src="koltuk1.jpg"><div style="padding:20px;"><h3>Koltuk Yıkama</h3><p>Derinlemesine temizlik ve vakumlama.</p></div></div>
-        <div class="hizmet-kart"><img src="storperde1.jpg"><div style="padding:20px;"><h3>Stor Perde Yıkama</h3><p>Leke çıkarıcı özel formüller.</p></div></div>
-        <div class="hizmet-kart"><img src="yatak1.jpg"><div style="padding:20px;"><h3>Yatak & Baza Yıkama</h3><p>Mite ve bakterilere karşı koruma.</p></div></div>
-        <div class="hizmet-kart"><img src="halıflex1.jpg"><div style="padding:20px;"><h3>Halıflex Yıkama</h3><p>Ofis ve evler için yerinde yıkama.</p></div></div>
-        <div class="hizmet-kart"><img src="araba1.jpg"><div style="padding:20px;"><h3>Araç Koltuğu Yıkama</h3><p>Aracınızın içi ilk günkü gibi.</p></div></div>
-        <div class="hizmet-kart"><img src="sandalye1.jpg"><div style="padding:20px;"><h3>Sandalye Yıkama</h3><p>Restoran ve ev sandalyeleri.</p></div></div>
+        <div class="hizmet-kart"><img src="koltuk1.jpg"><div style="padding:20px;"><h3>Koltuk Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="storperde1.jpg"><div style="padding:20px;"><h3>Stor Perde Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="yatak1.jpg"><div style="padding:20px;"><h3>Yatak & Baza Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="halıflex1.jpg"><div style="padding:20px;"><h3>Halıflex Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="araba1.jpg"><div style="padding:20px;"><h3>Araç Koltuğu Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="sandalye1.jpg"><div style="padding:20px;"><h3>Sandalye Yıkama</h3></div></div>
     </div>
 </section>
 
-<!-- HİZMET BÖLGELERİ BÖLÜMÜ -->
 <section id="bolgeler">
     <h2 class="section-title">Hizmet Bölgelerimiz</h2>
-    <p>İstanbul'un hem <strong>Avrupa</strong> hem de <strong>Anadolu</strong> yakasındaki tüm ilçelere gezici servisimizle ulaşıyoruz.</p>
     <div class="bolge-konteyner">
-        <div class="bolge-kart">
-            <h3><i class="fas fa-bridge"></i> Avrupa Yakası</h3>
-            <div class="bolge-listesi">
-                Arnavutköy, Avcılar, Bağcılar, Bahçelievler, Bakırköy, Başakşehir, Bayrampaşa, Beşiktaş, Beylikdüzü, Beyoğlu, Büyükçekmece, Esenler, Esenyurt, Eyüpsultan, Fatih, Gaziosmanpaşa, Güngören, Kağıthane, Küçükçekmece, Sarıyer, Sultangazi, Şişli, Zeytinburnu.
-            </div>
-        </div>
-        <div class="bolge-kart">
-            <h3><i class="fas fa-mosque"></i> Anadolu Yakası</h3>
-            <div class="bolge-listesi">
-                Ataşehir, Beykoz, Çekmeköy, Kadıköy, Kartal, Maltepe, Pendik, Sancaktepe, Sultanbeyli, Şile, Tuzla, Ümraniye, Üsküdar.
-            </div>
-        </div>
+        <div class="bolge-kart"><h3>Avrupa Yakası</h3></div>
+        <div class="bolge-kart"><h3>Anadolu Yakası</h3></div>
     </div>
 </section>
 
-<!-- WHATSAPP SABİT BUTON -->
 <a href="https://wa.me" class="wa-float" target="_blank">
-    <i class="fab fa-whatsapp" style="color: white; font-size: 35px;"></i>
+    <img src="whatsapp.png" alt="WhatsApp">
 </a>
 
-<footer>
-    <p>© 2024 Özfavori Koltuk Yıkama - Profesyonel Hijyen Çözümleri</p>
-    <p><small>Tüm İstanbul genelinde hizmet vermekteyiz.</small></p>
-</footer>
+<footer>© 2024 Özfavori Koltuk Yıkama</footer>
 
 </body>
 </html>
+
 
