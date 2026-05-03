@@ -8,9 +8,9 @@
         /* GENEL TASARIM AYARLARI */
         body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
         
-        /* ÜST MENÜ, LOGO VE SLOGAN */
+        /* ÜST MENÜ, LOGO VE ALTINDAKİ SLOGAN */
         nav { 
-            background: white; padding: 10px 5%; display: flex; 
+            background: white; padding: 15px 5%; display: flex; 
             justify-content: space-between; align-items: center; 
             position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
         }
@@ -23,9 +23,9 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; }
         .nav-links a:hover { color: #0056b3; }
 
-        /* ARKA PLAN RESMİ (resim1.jpg) */
+        /* ANA KAPAK RESMİ (resim1.jpg) */
         header { 
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('resim1.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('resim1.jpg'); 
             background-size: cover; background-position: center; height: 500px; 
         }
 
@@ -63,7 +63,6 @@
             align-items: center; justify-content: center; z-index: 9999; 
             box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s;
         }
-        .wa-float:hover { transform: scale(1.1); }
         .wa-float img { width: 35px; height: 35px; }
         .phone-big { font-size: 2.5em; color: #0056b3; font-weight: bold; text-decoration: none; display: block; margin: 20px 0; }
 
@@ -72,11 +71,11 @@
 </head>
 <body>
 
-<!-- NAVİGASYON -->
+<!-- LOGO, SLOGAN VE MENÜ -->
 <nav>
     <div class="logo-box">
         <a href="#"><img src="logo.jpg" alt="Logo"></a>
-        <div class="logo-slogan">PROFESYONEL TEMİZLİK </div>
+        <div class="logo-slogan">PRFESYONEL TEMİZLİK </div>
     </div>
     <ul class="nav-links">
         <li><a href="#">Anasayfa</a></li>
@@ -106,7 +105,7 @@
 <section id="hizmetler" style="background: #f1f4f8;">
     <h2 class="section-title">Hizmetlerimiz</h2>
     <div class="hizmet-grid">
-        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3><p>Buharlı ve derinlemesine vakumlu sistemle hijyen sağlıyoruz.</p></div></div>
+        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3><p>Buharlı ve derinlemesine vakumlu hijyen.</p></div></div>
         <div class="hizmet-kart"><img src="storperde1.jpg"><div class="hizmet-icerik"><h3>Stor Perde Yıkama</h3><p>Özel yöntemlerle dokusuna zarar vermeden temizlik.</p></div></div>
         <div class="hizmet-kart"><img src="yatak1.jpg"><div class="hizmet-icerik"><h3>Yatak & Baza Yıkama</h3><p>Anti-alerjik vakumlu temizlik ile sağlıklı uyku alanları.</p></div></div>
         <div class="hizmet-kart"><img src="halıflex1.jpg"><div class="hizmet-icerik"><h3>Halıflex Yıkama</h3><p>Yerinde yüksek vakumlu profesyonel temizlik.</p></div></div>
@@ -132,11 +131,10 @@
     <h2 class="section-title">İletişim</h2>
     <p>Ücretsiz fiyat bilgisi ve randevu için hemen arayın:</p>
     <a href="tel:05055984487" class="phone-big">0505 598 44 87</a>
-    <p>Haftanın 7 günü hizmetinizdeyiz.</p>
 </section>
 
 <!-- WHATSAPP BUTONU -->
-<a href="https://wa.me." class="wa-float" target="_blank">
+<<a href="https://wa.me." class="wa-float" target="_blank">
     <img src="https://wikimedia.org" alt="WhatsApp">
 </a>
 
