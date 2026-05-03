@@ -9,9 +9,8 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
         nav { background: white; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         .nav-left { display: flex; align-items: center; }
-        .logo-box { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .logo-box img { height: 75px; width: auto; }
-        .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; text-align: center; }
         .header-phone { display: flex; align-items: center; gap: 12px; color: #000000; font-weight: 800; font-size: 1.5em; text-decoration: none; border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; }
         .phone-icon-green { color: #25d366; font-size: 1.1em; }
         .nav-right { display: flex; align-items: center; gap: 15px; }
@@ -21,9 +20,6 @@
         .btn-randevu { background-color: #0056b3; color: white !important; padding: 12px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,86,179,0.3); text-decoration: none; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
         header { background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('logo2.jpg'); background-size: cover; background-position: center; height: 500px; }
         section { padding: 80px 10%; text-align: center; }
-        .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; position: relative; }
-        .about-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left; }
-        .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { background: white; border-radius: 20px; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; transition: 0.3s; }
         .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
@@ -51,15 +47,15 @@
             <li><a href="#hakkimizda">Hakkımızda</a></li>
             <li><a href="#hizmetler">Hizmetler</a></li>
         </ul>
-        <!-- DÜZELTİLEN RANDEVU AL LİNKİ -->
-        <a href="https://whatsapp.com" target="_blank" class="btn-randevu">Randevu Al</a>
+        <!-- RANDEVU AL: LİNK DÜZELTİLDİ -->
+        <a href="https://wa.me" target="_blank" class="btn-randevu">Randevu Al</a>
     </div>
 </nav>
 
 <header id="anasayfa"></header>
 
 <section id="hakkimizda" style="background: white;">
-    <div class="about-container">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
         <div style="flex: 1; min-width: 300px; max-width: 450px;"><img src="hakkimizda1.jpg" alt="Hakkımızda" style="width:100%; border-radius:20px;"></div>
         <div style="flex: 1.5; min-width: 300px;">
             <h2 style="font-size: 2.2em; color: #002a5c;">Hakkımızda</h2>
@@ -80,8 +76,8 @@
     </div>
 </section>
 
-<!-- DÜZELTİLEN WHATSAPP SABİT BUTON LİNKİ -->
-<a href="https://whatsapp.com" class="wa-float" target="_blank">
+<!-- WHATSAPP SABİT: LİNK DÜZELTİLDİ -->
+<a href="https://wa.me" class="wa-float" target="_blank">
     <img src="whatsapp.png" alt="WhatsApp">
 </a>
 
