@@ -4,79 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özfavori Koltuk Yıkama | İstanbul Profesyonel Temizlik</title>
-    <!-- İkon kütüphanesi -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
-        
-        /* ÜST MENÜ */
-        nav { 
-            background: white; padding: 12px 5%; display: flex; 
-            justify-content: space-between; align-items: center; 
-            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
-        }
-        
+        nav { background: white; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
         .nav-left { display: flex; align-items: center; }
         .logo-box { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .logo-box img { height: 75px; width: auto; }
         .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* TELEFON TASARIMI */
-        .header-phone { 
-            display: flex; align-items: center; gap: 15px; color: #000000; 
-            font-weight: 800; font-size: 1.5em; text-decoration: none; 
-            border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; 
-        }
-        .phone-icon-classic { color: #25d366; font-size: 1.1em; }
-
+        .header-phone { display: flex; align-items: center; gap: 12px; color: #000000; font-weight: 800; font-size: 1.5em; text-decoration: none; border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; }
+        .phone-icon-green { color: #25d366; font-size: 1.1em; }
         .nav-right { display: flex; align-items: center; gap: 15px; }
         .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
         .nav-links li { margin-left: 15px; }
         .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.85em; }
-        
-        /* RANDEVU BUTONU */
-        .btn-randevu { 
-            background-color: #0056b3; color: white !important; 
-            padding: 12px 25px; border-radius: 50px; 
-            font-weight: bold; box-shadow: 0 4px 12px rgba(0,86,179,0.3); 
-            text-decoration: none; text-transform: uppercase; font-size: 0.85em; transition: 0.3s;
-        }
-        .btn-randevu:hover { transform: scale(1.05); background-color: #003d80; }
-
-        /* ARKA PLAN */
-        header { 
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('logo2.jpg'); 
-            background-size: cover; background-position: center; height: 500px; 
-        }
-
+        .btn-randevu { background-color: #0056b3; color: white !important; padding: 12px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,86,179,0.3); text-decoration: none; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
+        header { background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('logo2.jpg'); background-size: cover; background-position: center; height: 500px; }
         section { padding: 80px 10%; text-align: center; }
         .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; position: relative; }
-        .section-title::after { content: ''; width: 60px; height: 3px; background: #ffd700; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
-
         .about-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left; }
         .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .about-text { flex: 1.5; min-width: 300px; }
-
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { background: white; border-radius: 20px; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; transition: 0.3s; }
         .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
-
-        /* YÜZEN WHATSAPP */
-        .wa-float { 
-            position: fixed; bottom: 50px; right: 30px; background-color: #25d366; 
-            width: 60px; height: 60px; border-radius: 50px; display: flex; 
-            align-items: center; justify-content: center; z-index: 9999; 
-            box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; border: 2px solid white;
-        }
+        .wa-float { position: fixed; bottom: 50px; right: 30px; background-color: #25d366; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; z-index: 9999; box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; border: 2px solid white; }
         .wa-float img { width: 32px; height: 32px; }
-
         footer { padding: 40px; background: #222; color: white; text-align: center; }
-
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 15px; padding: 20px 5%; }
-            .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.3em; }
-            .nav-right { flex-direction: column; gap: 10px; }
-        }
+        @media (max-width: 768px) { nav { flex-direction: column; gap: 15px; } .header-phone { border-left: none; padding-left: 0; margin-left: 0; } }
     </style>
 </head>
 <body>
@@ -88,18 +42,17 @@
             <div class="logo-slogan">PROFESYONEL TEMİZLİK</div>
         </div>
         <a href="tel:05055984487" class="header-phone">
-            <i class="fas fa-phone-alt phone-icon-classic"></i> 0505 598 44 87
+            <i class="fas fa-phone-alt phone-icon-green"></i> 0505 598 44 87
         </a>
     </div>
-
     <div class="nav-right">
         <ul class="nav-links">
             <li><a href="#anasayfa">Anasayfa</a></li>
             <li><a href="#hakkimizda">Hakkımızda</a></li>
             <li><a href="#hizmetler">Hizmetler</a></li>
         </ul>
-        <!-- RANDEVU AL BUTONU: WHATSAPP BAĞLANTISI DÜZELTİLDİ -->
-        <a href="https://wa.me." target="_blank" class="btn-randevu">Randevu Al</a>
+        <!-- DÜZELTİLEN RANDEVU AL LİNKİ -->
+        <a href="https://whatsapp.com" target="_blank" class="btn-randevu">Randevu Al</a>
     </div>
 </nav>
 
@@ -108,9 +61,9 @@
 <section id="hakkimizda" style="background: white;">
     <div class="about-container">
         <div style="flex: 1; min-width: 300px; max-width: 450px;"><img src="hakkimizda1.jpg" alt="Hakkımızda" style="width:100%; border-radius:20px;"></div>
-        <div class="about-text">
+        <div style="flex: 1.5; min-width: 300px;">
             <h2 style="font-size: 2.2em; color: #002a5c;">Hakkımızda</h2>
-            <p><strong>Özfavori Koltuk Yıkama</strong> olarak, İstanbul'un her noktasına profesyonel hijyen götürüyoruz. Koltuk, yatak ve araçlarınızda derinlemesine temizlik sağlıyoruz.</p>
+            <p><strong>Özfavori Koltuk Yıkama</strong> olarak İstanbul'un her noktasına profesyonel hijyen götürüyoruz.</p>
         </div>
     </div>
 </section>
@@ -127,13 +80,8 @@
     </div>
 </section>
 
-<section style="background: white; padding: 40px;">
-    <h2 style="color: #002a5c;">Hizmet Bölgelerimiz</h2>
-    <p style="font-size: 1.4em; font-weight: bold; color: #0056b3;">İstanbul Avrupa ve Anadolu Yakası Tüm İlçeler</p>
-</section>
-
-<!-- SAĞ ALT WHATSAPP BUTONU: BAĞLANTI DÜZELTİLDİ -->
-<a href="https://wa.me" class="wa-float" target="_blank">
+<!-- DÜZELTİLEN WHATSAPP SABİT BUTON LİNKİ -->
+<a href="https://whatsapp.com" class="wa-float" target="_blank">
     <img src="whatsapp.png" alt="WhatsApp">
 </a>
 
@@ -141,5 +89,4 @@
 
 </body>
 </html>
-
 
