@@ -25,6 +25,13 @@
         section { padding: 80px 10%; text-align: center; }
         .section-title { font-size: 2.2em; color: #002a5c; margin-bottom: 40px; }
         
+        .insta-box { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: inline-block; transition: 0.3s; text-decoration: none; color: inherit; }
+        .insta-box:hover { transform: scale(1.02); }
+        .insta-icon { font-size: 4em; background: -webkit-linear-gradient(#405de6, #833ab4, #fd1d1d, #fcb045); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .insta-box h3 { margin: 10px 0; font-size: 1.5em; }
+        .insta-box p { color: #666; margin-bottom: 20px; }
+        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; padding: 10px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; }
+
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { background: white; border-radius: 20px; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; transition: 0.3s; }
         .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
@@ -111,7 +118,17 @@
     </div>
 </section>
 
-<section id="bolgeler">
+<section id="instagram" style="background: white;">
+    <h2 class="section-title">Bizi Instagram'da Takip Edin</h2>
+    <a href="https://instagram.com" target="_blank" class="insta-box">
+        <i class="fab fa-instagram insta-icon"></i>
+        <h3>@ozfavorikoltukyikama</h3>
+        <p>Yıkama öncesi ve sonrası videolarımız için takipte kalın!</p>
+        <span class="btn-insta">Instagram'a Git</span>
+    </a>
+</section>
+
+<section id="bolgeler" style="background: #f1f4f8;">
     <h2 class="section-title">Hizmet Bölgelerimiz</h2>
     <div class="bolge-konteyner">
         <div class="bolge-kart"><h3>Avrupa Yakası</h3></div>
