@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Öz Favori Koltuk Yıkama | Profesyonel Temizlik</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; scroll-behavior: smooth; }
+        /* TEMEL AYARLAR */
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; scroll-behavior: smooth; }
         
-        /* ÜST MENÜ */
+        /* MENÜ ÇUBUĞU (NAVBAR) */
         nav { 
             background: white; 
             padding: 10px 5%; 
@@ -19,24 +20,43 @@
             z-index: 1000; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
         }
-        .logo-link img { height: 65px; width: auto; }
+        .logo-link img { height: 70px; width: auto; }
         .nav-links { list-style: none; display: flex; margin: 0; }
         .nav-links li { margin-left: 25px; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; transition: 0.3s; font-size: 0.9em; }
+        .nav-links a:hover { color: #0056b3; }
 
-        /* ARKA FON RESİMLİ KAPAK (resim1.jpg) */
+        /* ARKA FONLU ÜST ALAN (HEADER) */
         header { 
-            background: linear-gradient(rgba(0,42,92,0.7), rgba(0,42,92,0.7)), url('resim1.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('resim1.jpg'); 
             background-size: cover; 
             background-position: center; 
-            background-attachment: fixed; /* Kaydırırken resim sabit kalır, şık durur */
+            padding: 200px 20px; 
+            text-align: right; 
+        }
+        .slogan-container {
+            display: inline-block;
+            margin-right: 5%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .slogan-text {
             color: white; 
-            padding: 150px 20px; 
-            text-align: center; 
+            font-size: 1.8em; 
+            margin: 0; 
+            font-weight: 700; 
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            border-bottom: 4px solid #ffd700;
+            padding-bottom: 5px;
         }
 
+        /* BÖLÜMLER */
         section { padding: 80px 10%; text-align: center; }
-        .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; }
+        .section-title { font-size: 2.2em; color: #002a5c; margin-bottom: 40px; }
 
         /* HİZMET KARTLARI */
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
@@ -46,76 +66,86 @@
         }
         .hizmet-kart img { width: 100%; height: 200px; object-fit: cover; }
         .hizmet-icerik { padding: 25px; }
-        .numara { color: #0056b3; font-weight: bold; font-size: 1.2em; margin-bottom: 10px; display: block; }
 
-<!-- WHATSAPP YÜZEN BUTON - GÜNCEL -->
-<a href="https://wa.me." 
-   class="wa-float" 
-   target="_blank" 
-   style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; width: 65px; height: 65px; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s;">
-   <img src="https://wikimedia.org" alt="WhatsApp" style="width: 35px; height: 35px;">
-</a>
+        /* WHATSAPP BUTONU */
+        .wa-float { 
+            position: fixed; bottom: 30px; right: 30px; 
+            background-color: #25d366; width: 65px; height: 65px; 
+            border-radius: 50px; display: flex; align-items: center; 
+            justify-content: center; z-index: 9999; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); text-decoration: none;
+        }
+        .wa-float img { width: 35px; height: 35px; }
 
+        footer { padding: 40px; background: #222; color: white; text-align: center; }
+    </style>
+</head>
+<body>
 
+<!-- MENÜ VE LOGO -->
 <nav>
-    <a href="#" class="logo-link"><img src="logo.jpg" alt="Öz Favori Logo"></a>
+    <a href="#" class="logo-link"><img src="logo.jpg" alt="Logo"></a>
     <ul class="nav-links">
-        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#anasayfa">Anasayfa</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
         <li><a href="#hizmetler">Hizmetler</a></li>
         <li><a href="#iletisim">İletişim</a></li>
     </ul>
 </nav>
 
-<!-- ARKA FON RESİMLİ KAPAK (resim1.jpg) -->
-<header id="anasayfa" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('resim1.jpg'); background-size: cover; background-position: center; padding: 180px 20px; text-align: right; border: none;">
-    <div style="padding-right: 10%; border: none; background: none;">
-        <h2 style="color: #ffd700; font-size: 3.5em; text-shadow: 3px 3px 6px rgba(0,0,0,0.6); margin: 0; font-weight: 900; text-transform: uppercase; border: none;">
-
-        </h2>
-        <p style="color: white; font-size: 1.3em; margin-top: 10px; font-weight: 500; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-            Öz Favori Güvencesiyle
-        </p>
+<!-- ARKA FON VE SLOGAN -->
+<header id="anasayfa">
+    <div class="slogan-container">
+        <p class="slogan-text">Öz Favori Güvencesiyle</p>
     </div>
 </header>
 
+<!-- HAKKIMIZDA -->
+<section id="hakkimizda">
+    <h2 class="section-title">Hakkımızda</h2>
+    <p style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1em; color: #555;">
+        Öz Favori Koltuk Yıkama olarak, profesyonel ekipmanlarımızla yaşam alanlarınıza hijyen getiriyoruz. 
+        Müşteri memnuniyeti odaklı hizmet anlayışımızla koltuk, yatak ve araç koltuklarınızı derinlemesine temizliyoruz.
+    </p>
+</section>
 
-
-<section id="hizmetler">
+<!-- HİZMETLER -->
+<section id="hizmetler" style="background: #f1f4f8;">
     <h2 class="section-title">Hizmetlerimiz</h2>
     <div class="hizmet-grid">
-        
         <div class="hizmet-kart">
             <img src="resim2.jpg" alt="Koltuk Yıkama">
             <div class="hizmet-icerik">
-                <span class="numara">01</span>
-                <h3>Detaylı Koltuk Yıkama</h3>
-                <p>resim2'de gördüğünüz gibi profesyonel makinelerle derinlemesine hijyen sağlıyoruz.</p>
+                <h3 style="color:#0056b3;">Koltuk Yıkama</h3>
+                <p>Buharlı ve vakumlu sistemle koltuklarınızda ilk günkü temizlik.</p>
             </div>
         </div>
-
         <div class="hizmet-kart">
             <img src="https://unsplash.com" alt="Yatak Yıkama">
             <div class="hizmet-icerik">
-                <span class="numara">02</span>
-                <h3>Yatak & Baza Yıkama</h3>
-                <p>Mite ve bakterilere karşı vakumlu, anti-alerjik temizlik.</p>
+                <h3 style="color:#0056b3;">Yatak Yıkama</h3>
+                <p>Anti-alerjik temizlik ile sağlıklı bir uyku alanı.</p>
             </div>
         </div>
-
     </div>
 </section>
 
-<section id="iletisim" style="background: white;">
-    <h2 class="section-title">Hemen Randevu Alın</h2>
-    <p>Kaliteli hizmet, uygun fiyat garantisiyle yanınızdayız.</p>
-    <a href="tel:05055984487" style="font-size: 2.5em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
+<!-- İLETİŞİM -->
+<section id="iletisim">
+    <h2 class="section-title">İletişim</h2>
+    <p>Bilgi ve Randevu İçin Hemen Arayın:</p>
+    <a href="tel:05055984487" style="font-size: 2.2em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
 </section>
 
-<a href="https://wa.me" class="wa-float">💬</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me." class="wa-float" target="_blank">
+    <img src="https://wikimedia.org" alt="WhatsApp">
+</a>
 
-<footer style="padding: 40px; background: #222; color: white; text-align: center;">
+<footer>
     © 2024 Öz Favori Koltuk Yıkama - Tüm Hakları Saklıdır.
 </footer>
 
 </body>
 </html>
+
