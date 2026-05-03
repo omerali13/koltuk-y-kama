@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özfavori Koltuk Yıkama | İstanbul Profesyonel Temizlik</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         /* GENEL AYARLAR */
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
@@ -20,14 +21,18 @@
         .logo-box img { height: 75px; width: auto; }
         .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* YEŞİL TELEFON İKONLU SİYAH NUMARA */
+        /* YEŞİL KLASİK TELEFON VE SİYAH NUMARA */
         .header-phone { 
-            display: flex; align-items: center; gap: 12px; color: #000000; 
-            font-weight: 800; font-size: 1.4em; text-decoration: none; 
+            display: flex; align-items: center; gap: 15px; color: #000000; 
+            font-weight: 800; font-size: 1.5em; text-decoration: none; 
             border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; 
         }
-        /* Yeşil Ahize İkonu */
-        .phone-icon { color: #25d366; font-size: 1.2em; }
+        /* Eski Tip Telefon İkonu (Yeşil) */
+        .phone-icon-classic { 
+            color: #25d366; 
+            font-size: 1.2em; 
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
 
         .nav-right { display: flex; align-items: center; gap: 15px; }
         .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
@@ -59,6 +64,7 @@
         .about-text { flex: 1.5; min-width: 300px; }
         .about-text p { line-height: 1.8; color: #555; font-size: 1.1em; margin-bottom: 15px; }
 
+        /* HİZMETLER */
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { 
             background: white; border-radius: 20px; width: 320px; 
@@ -75,15 +81,16 @@
             align-items: center; justify-content: center; z-index: 9999; 
             box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; border: 2px solid white;
         }
+        .wa-float:hover { transform: scale(1.1); }
         .wa-float img { width: 32px; height: 32px; }
 
         footer { padding: 40px; background: #222; color: white; text-align: center; }
 
+        /* MOBİL DÜZENLEME */
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 15px; padding: 20px 5%; }
-            .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.2em; }
+            .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.3em; }
             .nav-right { flex-direction: column; gap: 10px; }
-            header { height: 350px; }
         }
     </style>
 </head>
@@ -95,9 +102,9 @@
             <a href="#"><img src="logo.jpg" alt="Logo"></a>
             <div class="logo-slogan">PROFESYONEL TEMİZLİK</div>
         </div>
-        <!-- Yeşil Ahize İkonu ve Siyah Büyük Numara -->
+        <!-- Yeşil Eski Tip Ahize ve Siyah Büyük Numara -->
         <a href="tel:05055984487" class="header-phone">
-            <span class="phone-icon">📞</span> 0505 598 44 87
+            <i class="fas fa-phone-alt phone-icon-classic"></i> 0505 598 44 87
         </a>
     </div>
 
@@ -148,4 +155,5 @@
 
 </body>
 </html>
+
 
