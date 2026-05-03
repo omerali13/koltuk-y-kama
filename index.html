@@ -20,13 +20,14 @@
         .logo-box img { height: 75px; width: auto; }
         .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* TELEFON NUMARASI (Siyah ve Büyük) */
+        /* YEŞİL TELEFON İKONLU SİYAH NUMARA */
         .header-phone { 
             display: flex; align-items: center; gap: 12px; color: #000000; 
             font-weight: 800; font-size: 1.4em; text-decoration: none; 
             border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; 
         }
-        .header-phone img { width: 28px; height: 28px; } /* Yeşil Telefon İkonu */
+        /* Yeşil Ahize İkonu */
+        .phone-icon { color: #25d366; font-size: 1.2em; }
 
         .nav-right { display: flex; align-items: center; gap: 15px; }
         .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
@@ -41,7 +42,7 @@
         }
         .btn-randevu:hover { transform: scale(1.05); background-color: #003d80; }
 
-        /* YENİ ARKA PLAN (logo2.jpg) */
+        /* ARKA PLAN (logo2.jpg) */
         header { 
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('logo2.jpg'); 
             background-size: cover; background-position: center; height: 500px; 
@@ -52,14 +53,12 @@
         .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; position: relative; }
         .section-title::after { content: ''; width: 60px; height: 3px; background: #ffd700; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
 
-        /* HAKKIMIZDA */
         .about-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left; }
         .about-image { flex: 1; min-width: 300px; max-width: 450px; }
         .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .about-text { flex: 1.5; min-width: 300px; }
         .about-text p { line-height: 1.8; color: #555; font-size: 1.1em; margin-bottom: 15px; }
 
-        /* HİZMET KARTLARI */
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { 
             background: white; border-radius: 20px; width: 320px; 
@@ -76,12 +75,10 @@
             align-items: center; justify-content: center; z-index: 9999; 
             box-shadow: 0 8px 25px rgba(37,211,102,0.4); transition: 0.3s; border: 2px solid white;
         }
-        .wa-float:hover { transform: scale(1.1); }
         .wa-float img { width: 32px; height: 32px; }
 
         footer { padding: 40px; background: #222; color: white; text-align: center; }
 
-        /* MOBİL UYUM */
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 15px; padding: 20px 5%; }
             .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.2em; }
@@ -98,9 +95,9 @@
             <a href="#"><img src="logo.jpg" alt="Logo"></a>
             <div class="logo-slogan">PROFESYONEL TEMİZLİK</div>
         </div>
-        <!-- Yeşil ikonlu siyah büyük numara -->
+        <!-- Yeşil Ahize İkonu ve Siyah Büyük Numara -->
         <a href="tel:05055984487" class="header-phone">
-            <img src="whatsapp.png" alt="Ara"> 0505 598 44 87
+            <span class="phone-icon">📞</span> 0505 598 44 87
         </a>
     </div>
 
