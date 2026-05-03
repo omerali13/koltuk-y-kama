@@ -20,15 +20,13 @@
         .logo-box img { height: 75px; width: auto; }
         .logo-slogan { margin-top: 5px; font-weight: 800; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* GÜNCELLENEN TELEFON NUMARASI TASARIMI */
+        /* TELEFON NUMARASI (Siyah ve Büyük) */
         .header-phone { 
-            display: flex; align-items: center; gap: 12px; color: #000000; /* Numara Siyah Yapıldı */
-            font-weight: 800; font-size: 1.4em; /* Numara Büyütüldü */
-            text-decoration: none; 
+            display: flex; align-items: center; gap: 12px; color: #000000; 
+            font-weight: 800; font-size: 1.4em; text-decoration: none; 
             border-left: 2px solid #eee; padding-left: 25px; margin-left: 25px; 
-            transition: 0.3s;
         }
-        .header-phone img { width: 28px; height: 28px; } /* İkon Boyutu */
+        .header-phone img { width: 28px; height: 28px; } /* Yeşil Telefon İkonu */
 
         .nav-right { display: flex; align-items: center; gap: 15px; }
         .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
@@ -43,10 +41,10 @@
         }
         .btn-randevu:hover { transform: scale(1.05); background-color: #003d80; }
 
-        /* KAPAK RESMİ */
+        /* YENİ ARKA PLAN (logo2.jpg) */
         header { 
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('resim1.jpg'); 
-            background-size: cover; background-position: center; height: 480px; 
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('logo2.jpg'); 
+            background-size: cover; background-position: center; height: 500px; 
         }
 
         /* BÖLÜMLER */
@@ -83,6 +81,7 @@
 
         footer { padding: 40px; background: #222; color: white; text-align: center; }
 
+        /* MOBİL UYUM */
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 15px; padding: 20px 5%; }
             .header-phone { border-left: none; padding-left: 0; margin-left: 0; font-size: 1.2em; }
@@ -99,7 +98,7 @@
             <a href="#"><img src="logo.jpg" alt="Logo"></a>
             <div class="logo-slogan">PROFESYONEL TEMİZLİK</div>
         </div>
-        <!-- GÜNCELLENEN TELEFON ALANI -->
+        <!-- Yeşil ikonlu siyah büyük numara -->
         <a href="tel:05055984487" class="header-phone">
             <img src="whatsapp.png" alt="Ara"> 0505 598 44 87
         </a>
