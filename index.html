@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Öz Favori Koltuk Yıkama | Profesyonel Temizlik</title>
+    <title>Özfavori Koltuk Yıkama | Profesyonel Temizlik ve Hijyen</title>
     <style>
-        /* GENEL TASARIM */
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
+        /* GENEL TASARIM AYARLARI */
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
         
         /* ÜST MENÜ, LOGO VE SLOGAN */
         nav { 
@@ -18,106 +18,131 @@
         .logo-box img { height: 75px; width: auto; }
         .logo-slogan { margin-top: 5px; font-weight: 700; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
         
-        .nav-links { list-style: none; display: flex; margin: 0; }
-        .nav-links li { margin-left: 25px; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.9em; }
+        .nav-links { list-style: none; display: flex; margin: 0; padding: 0; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.9em; transition: 0.3s; }
+        .nav-links a:hover { color: #0056b3; }
 
-        /* ARKA PLAN RESMİ */
+        /* ARKA PLAN RESMİ (resim1.jpg) */
         header { 
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('resim1.jpg'); 
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('resim1.jpg'); 
             background-size: cover; background-position: center; height: 500px; 
         }
 
-        /* BÖLÜMLER */
-        section { padding: 70px 10%; text-align: center; }
+        /* BÖLÜMLER GENEL */
+        section { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: #ffd700; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        /* HAKKIMIZDA (RESİM SOLDA, METİN SAĞDA) */
+        .about-container { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; text-align: left; }
+        .about-image { flex: 1; min-width: 300px; }
+        .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .about-text { flex: 1.5; min-width: 300px; }
+        .about-text p { line-height: 1.8; color: #555; font-size: 1.1em; margin-bottom: 15px; }
+
+        /* HİZMET KARTLARI */
         .hizmet-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
         .hizmet-kart { 
-            background: white; border-radius: 20px; width: 300px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; 
+            background: white; border-radius: 20px; width: 320px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); overflow: hidden; text-align: left; transition: 0.3s;
         }
-        .hizmet-kart img { width: 100%; height: 200px; object-fit: cover; }
-        .hizmet-icerik { padding: 20px; }
-        .hizmet-icerik h3 { color: #0056b3; margin-top: 0; }
+        .hizmet-kart:hover { transform: translateY(-10px); }
+        .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
+        .hizmet-icerik { padding: 25px; }
+        .hizmet-icerik h3 { color: #0056b3; margin-top: 0; font-size: 1.3em; }
 
-        /* WHATSAPP */
+        /* SERVİS BÖLGELERİ */
+        .bolge-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+        .tag { background: #e9ecef; padding: 8px 18px; border-radius: 50px; font-size: 0.9em; color: #495057; font-weight: 500; }
+
+        /* WHATSAPP VE İLETİŞİM */
         .wa-float { 
             position: fixed; bottom: 30px; right: 30px; background-color: #25d366; 
             width: 65px; height: 65px; border-radius: 50px; display: flex; 
             align-items: center; justify-content: center; z-index: 9999; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s;
         }
+        .wa-float:hover { transform: scale(1.1); }
         .wa-float img { width: 35px; height: 35px; }
+        .phone-big { font-size: 2.5em; color: #0056b3; font-weight: bold; text-decoration: none; display: block; margin: 20px 0; }
+
         footer { padding: 40px; background: #222; color: white; text-align: center; }
     </style>
 </head>
 <body>
 
+<!-- NAVİGASYON -->
 <nav>
     <div class="logo-box">
-        <a href="#"><img src="logo.jpg" alt="Öz Favori Logo"></a>
-        <div class="logo-slogan">PROFESYONEL HİZMET </div>
+        <a href="#"><img src="logo.jpg" alt="Logo"></a>
+        <div class="logo-slogan">PROFESYONEL TEMİZLİK </div>
     </div>
     <ul class="nav-links">
         <li><a href="#">Anasayfa</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
         <li><a href="#hizmetler">Hizmetler</a></li>
         <li><a href="#iletisim">İletişim</a></li>
     </ul>
 </nav>
 
+<!-- ANA KAPAK -->
 <header id="anasayfa"></header>
 
-<!-- RESİMLİ VE GÜNCEL HAKKIMIZDA BÖLÜMÜ -->
-<section id="hakkimizda" style="padding: 80px 10%; background: white;">
-    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; text-align: left;">
-        
-        <!-- SOL TARAF: RESİM (hakkimizda1.jpg olarak isimlendirdiğini varsayıyorum) -->
-        <div style="flex: 1; min-width: 300px; max-width: 500px;">
-            <img src="hakkimizda1.jpg" alt="Özfavori Hakkımızda" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+<!-- HAKKIMIZDA -->
+<section id="hakkimizda" style="background: white;">
+    <div class="about-container">
+        <div class="about-image"><img src="hakkimizda1.jpg" alt="Hakkımızda"></div>
+        <div class="about-text">
+            <h2 style="font-size: 2.5em; color: #002a5c; margin-bottom: 20px;">Hakkımızda</h2>
+            <p><strong>Özfavori Koltuk Yıkama</strong> olarak, yaşam alanlarınızda hijyen ve konforu ön planda tutarak profesyonel temizlik hizmeti sunmaktayız. Koltuk, yatak, araç koltuğu, stor perde, sandalye ve ofis koltukları gibi birçok alanda derinlemesine temizlik sağlayarak, ilk günkü ferahlığı yeniden kazandırıyoruz.</p>
+            <p>Alanında deneyimli ekibimiz ve son teknoloji ekipmanlarımız ile yüzeylerdeki kir, leke ve bakterileri etkili bir şekilde temizliyoruz. Kullandığımız özel temizlik ürünleri insan sağlığına zarar vermez ve kumaşlara uygun şekilde seçilir.</p>
+            <p style="font-weight: bold;">Müşteri memnuniyetini her zaman ön planda tutan firmamız, hızlı, güvenilir ve kaliteli hizmet anlayışıyla çalışmaktadır. Özfavori Koltuk Yıkama olarak, temizliğin en güvenilir adresi olmaya devam ediyoruz.</p>
         </div>
-
-        <!-- SAĞ TARAF: METİN -->
-        <div style="flex: 1.5; min-width: 300px;">
-            <h2 style="font-size: 2.5em; color: #002a5c; margin-bottom: 20px; position: relative;">Hakkımızda</h2>
-            <div style="width: 50px; height: 3px; background: #ffd700; margin-bottom: 20px;"></div>
-            
-            <p style="line-height: 1.8; color: #555; font-size: 1.1em; margin-bottom: 15px;">
-                <strong>Özfavori Koltuk Yıkama</strong> olarak, yaşam alanlarınızda hijyen ve konforu ön planda tutarak profesyonel temizlik hizmeti sunmaktayız. Koltuk, yatak, araç koltuğu, stor perde, sandalye ve ofis koltukları gibi birçok alanda derinlemesine temizlik sağlayarak, ilk günkü ferahlığı yeniden kazandırıyoruz.
-            </p>
-            <p style="line-height: 1.8; color: #555; font-size: 1.1em; margin-bottom: 15px;">
-                Alanında deneyimli ekibimiz ve son teknoloji ekipmanlarımız ile yüzeylerdeki kir, leke ve bakterileri etkili bir şekilde temizliyoruz. Kullandığımız özel temizlik ürünleri insan sağlığına zarar vermez ve kumaşlara uygun şekilde seçilir.
-            </p>
-            <p style="line-height: 1.8; color: #555; font-size: 1.1em; font-weight: 500;">
-                Müşteri memnuniyetini her zaman ön planda tutan firmamız, hızlı, güvenilir ve kaliteli hizmet anlayışıyla çalışmaktadır. Özfavori Koltuk Yıkama olarak, temizliğin en güvenilir adresi olmaya devam ediyoruz.
-            </p>
-        </div>
-
     </div>
 </section>
 
-
+<!-- HİZMETLER -->
 <section id="hizmetler" style="background: #f1f4f8;">
-    <h2 style="font-size: 2.2em; color: #002a5c; margin-bottom: 40px;">Hizmetlerimiz</h2>
+    <h2 class="section-title">Hizmetlerimiz</h2>
     <div class="hizmet-grid">
-        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3><p>Buharlı ve vakumlu derin hijyen.</p></div></div>
+        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3><p>Buharlı ve derinlemesine vakumlu sistemle hijyen sağlıyoruz.</p></div></div>
         <div class="hizmet-kart"><img src="storperde1.jpg"><div class="hizmet-icerik"><h3>Stor Perde Yıkama</h3><p>Özel yöntemlerle dokusuna zarar vermeden temizlik.</p></div></div>
-        <div class="hizmet-kart"><img src="yatak1.jpg"><div class="hizmet-icerik"><h3>Yatak & Baza Yıkama</h3><p>Anti-alerjik ve vakumlu temizlik.</p></div></div>
+        <div class="hizmet-kart"><img src="yatak1.jpg"><div class="hizmet-icerik"><h3>Yatak & Baza Yıkama</h3><p>Anti-alerjik vakumlu temizlik ile sağlıklı uyku alanları.</p></div></div>
         <div class="hizmet-kart"><img src="halıflex1.jpg"><div class="hizmet-icerik"><h3>Halıflex Yıkama</h3><p>Yerinde yüksek vakumlu profesyonel temizlik.</p></div></div>
-        <div class="hizmet-kart"><img src="araba1.jpg"><div class="hizmet-icerik"><h3>Araç Koltuğu Yıkama</h3><p>Detaylı iç mekan hijyeni.</p></div></div>
+        <div class="hizmet-kart"><img src="araba1.jpg"><div class="hizmet-icerik"><h3>Araç Koltuğu Yıkama</h3><p>Detaylı iç mekan hijyeni ve ferahlık.</p></div></div>
         <div class="hizmet-kart"><img src="sandalye1.jpg"><div class="hizmet-icerik"><h3>Sandalye & Döşeme</h3><p>Ev ve ofis sandalyeleri için derinlemesine temizlik.</p></div></div>
     </div>
 </section>
 
-<section id="iletisim">
-    <h2 style="font-size: 2.2em; color: #002a5c;">İletişim</h2>
-    <p>Ücretsiz fiyat bilgisi ve randevu için:</p>
-    <a href="tel:05055984487" style="font-size: 2.5em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
+<!-- SERVİS BÖLGELERİ -->
+<section id="bolgeler" style="background: white;">
+    <h2 class="section-title">Hizmet Bölgelerimiz</h2>
+    <p>İstanbul geneline servisimiz mevcuttur. Başlıca hizmet verdiğimiz bölgeler:</p>
+    <div class="bolge-tags">
+        <span class="tag">Bağcılar</span> <span class="tag">Esenler</span> <span class="tag">Güngören</span> 
+        <span class="tag">Bahçelievler</span> <span class="tag">Bakırköy</span> <span class="tag">Zeytinburnu</span> 
+        <span class="tag">Küçükçekmece</span> <span class="tag">Avcılar</span> <span class="tag">Başakşehir</span> 
+        <span class="tag">Bayrampaşa</span> <span class="tag">Gaziosmanpaşa</span> <span class="tag">Eyüp</span>
+    </div>
 </section>
 
-<a href="https://wa.me" class="wa-float" target="_blank">
+<!-- İLETİŞİM -->
+<section id="iletisim" style="background: #f1f4f8;">
+    <h2 class="section-title">İletişim</h2>
+    <p>Ücretsiz fiyat bilgisi ve randevu için hemen arayın:</p>
+    <a href="tel:05055984487" class="phone-big">0505 598 44 87</a>
+    <p>Haftanın 7 günü hizmetinizdeyiz.</p>
+</section>
+
+<!-- WHATSAPP BUTONU -->
+<a href="https://wa.me." class="wa-float" target="_blank">
     <img src="https://wikimedia.org" alt="WhatsApp">
 </a>
 
-<footer>© 2024 Öz Favori Koltuk Yıkama - Tüm Hakları Saklıdır.</footer>
+<footer>
+    &copy; 2024 Özfavori Koltuk Yıkama - Temizliğin Favori Adresi
+</footer>
 
 </body>
 </html>
