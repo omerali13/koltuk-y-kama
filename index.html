@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Özfavori Koltuk Yıkama | Profesyonel Temizlik ve Hijyen</title>
+    <title>Özfavori Koltuk Yıkama | İstanbul Avrupa & Anadolu Yakası</title>
     <style>
-        /* GENEL TASARIM */
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
+        /* GENEL AYARLAR */
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; scroll-behavior: smooth; }
         
-        /* LOGO, MENÜ VE RANDEVU BUTONU */
+        /* ÜST MENÜ, LOGO VE ÇİFT BUTON */
         nav { 
             background: white; padding: 10px 5%; display: flex; 
             justify-content: space-between; align-items: center; 
@@ -16,29 +16,30 @@
         }
         .logo-box { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .logo-box img { height: 75px; width: auto; }
-        .logo-slogan { margin-top: 5px; font-weight: 700; color: #0056b3; font-size: 0.80em; text-transform: uppercase; letter-spacing: 1px; }
+        .logo-slogan { margin-top: 5px; font-weight: 700; color: #0056b3; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
         
-        .nav-right { display: flex; align-items: center; }
+        .nav-right { display: flex; align-items: center; gap: 10px; }
         .nav-links { list-style: none; display: flex; margin: 0; padding: 0; align-items: center; }
         .nav-links li { margin-left: 15px; }
         .nav-links a { text-decoration: none; color: #333; font-weight: 600; text-transform: uppercase; font-size: 0.85em; transition: 0.3s; }
         
-        .btn-randevu { 
-            background-color: #0056b3; color: white !important; 
-            padding: 10px 20px; border-radius: 50px; 
-            font-weight: bold !important; box-shadow: 0 4px 10px rgba(0,86,179,0.2);
-            margin-left: 15px;
-        }
-        .btn-randevu:hover { background-color: #003d80; transform: scale(1.05); }
+        /* BUTON TASARIMLARI */
+        .btn-randevu { background-color: #0056b3; color: white !important; padding: 10px 15px; border-radius: 50px; font-weight: bold !important; font-size: 0.75em !important; box-shadow: 0 4px 10px rgba(0,86,179,0.2); }
+        .btn-ara { background-color: #25d366; color: white !important; padding: 10px 15px; border-radius: 50px; font-weight: bold !important; font-size: 0.75em !important; box-shadow: 0 4px 10px rgba(37,211,102,0.2); }
+        .btn-randevu:hover, .btn-ara:hover { transform: scale(1.05); opacity: 0.9; }
 
-        /* ANA KAPAK (resim1.jpg) */
+        /* ARKA PLAN */
         header { 
             background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('resim1.jpg'); 
             background-size: cover; background-position: center; height: 500px; 
         }
 
-        /* HAKKIMIZDA */
+        /* BÖLÜMLER */
         section { padding: 80px 10%; text-align: center; }
+        .section-title { font-size: 2.5em; color: #002a5c; margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 3px; background: #ffd700; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+        /* HAKKIMIZDA */
         .about-container { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; text-align: left; }
         .about-image { flex: 1; min-width: 300px; }
         .about-image img { width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
@@ -53,25 +54,30 @@
         }
         .hizmet-kart img { width: 100%; height: 220px; object-fit: cover; }
         .hizmet-icerik { padding: 25px; }
-        .hizmet-icerik h3 { color: #0056b3; margin: 0; font-size: 1.3em; }
+        .hizmet-icerik h3 { color: #0056b3; margin-top: 0; font-size: 1.3em; }
 
-        /* BÖLGELER */
-        .tag { background: #e9ecef; padding: 8px 18px; border-radius: 50px; font-size: 0.9em; color: #495057; font-weight: 500; display: inline-block; margin: 5px; }
+        /* BÖLGE LİSTESİ */
+        .bolge-wrapper { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
+        .bolge-column { flex: 1; min-width: 280px; max-width: 450px; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .bolge-column h3 { color: #0056b3; border-bottom: 2px solid #ffd700; display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        .tag-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .tag { background: #f1f4f8; padding: 7px 14px; border-radius: 50px; font-size: 0.85em; color: #555; font-weight: 500; border: 1px solid #e0e6ed; }
 
-        /* WHATSAPP */
+        /* WHATSAPP BUTONU */
         .wa-float { 
             position: fixed; bottom: 30px; right: 30px; background-color: #25d366; 
             width: 65px; height: 65px; border-radius: 50px; display: flex; 
             align-items: center; justify-content: center; z-index: 9999; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s;
         }
-        .wa-float img { width: 35px; height: 35px; }
+        .wa-float img { width: 38px; height: 38px; }
 
         footer { padding: 40px; background: #222; color: white; text-align: center; }
     </style>
 </head>
 <body>
 
+<!-- LOGO, MENÜ VE BUTONLAR -->
 <nav>
     <div class="logo-box">
         <a href="#"><img src="logo.jpg" alt="Logo"></a>
@@ -80,15 +86,16 @@
     <div class="nav-right">
         <ul class="nav-links">
             <li><a href="#anasayfa">Anasayfa</a></li>
-            <li><a href="#hakkimizda">Hakkımızda</a></li>
-            <li><a href="#hizmetler">Hizmetler</a></li>
             <li><a href="https://wa.me, randevu almak istiyorum." target="_blank" class="btn-randevu">Randevu Al</a></li>
+            <li><a href="tel:05055984487" class="btn-ara">📞 Hemen Ara</a></li>
         </ul>
     </div>
 </nav>
 
+<!-- ARKA PLAN -->
 <header id="anasayfa"></header>
 
+<!-- HAKKIMIZDA -->
 <section id="hakkimizda" style="background: white;">
     <div class="about-container">
         <div class="about-image"><img src="hakkimizda1.jpg" alt="Hakkımızda"></div>
@@ -101,30 +108,43 @@
     </div>
 </section>
 
+<!-- HİZMETLER -->
 <section id="hizmetler" style="background: #f1f4f8;">
-    <h2 style="font-size: 2.5em; color: #002a5c; margin-bottom: 40px;">Hizmetlerimiz</h2>
+    <h2 class="section-title">Hizmetlerimiz</h2>
     <div class="hizmet-grid">
-        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3></div></div>
-        <div class="hizmet-kart"><img src="storperde1.jpg"><div class="hizmet-icerik"><h3>Stor Perde Yıkama</h3></div></div>
-        <div class="hizmet-kart"><img src="yatak1.jpg"><div class="hizmet-icerik"><h3>Yatak & Baza Yıkama</h3></div></div>
-        <div class="hizmet-kart"><img src="halıflex1.jpg"><div class="hizmet-icerik"><h3>Halıflex Yıkama</h3></div></div>
-        <div class="hizmet-kart"><img src="araba1.jpg"><div class="hizmet-icerik"><h3>Araç Koltuğu Yıkama</h3></div></div>
-        <div class="hizmet-kart"><img src="sandalye1.jpg"><div class="hizmet-icerik"><h3>Sandalye Yıkama</h3></div></div>
+        <div class="hizmet-kart"><img src="koltuk1.jpg"><div class="hizmet-icerik"><h3>Koltuk Yıkama</h3><p>Buharlı ve derinlemesine vakumlu hijyen.</p></div></div>
+        <div class="hizmet-kart"><img src="storperde1.jpg"><div class="hizmet-icerik"><h3>Stor Perde Yıkama</h3><p>Özel yöntemlerle dokusuna zarar vermeden temizlik.</p></div></div>
+        <div class="hizmet-kart"><img src="yatak1.jpg"><div class="hizmet-icerik"><h3>Yatak & Baza Yıkama</h3><p>Anti-alerjik vakumlu temizlik ile sağlıklı uyku.</p></div></div>
+        <div class="hizmet-kart"><img src="halıflex1.jpg"><div class="hizmet-icerik"><h3>Halıflex Yıkama</h3><p>Yerinde yüksek vakumlu profesyonel temizlik.</p></div></div>
+        <div class="hizmet-kart"><img src="araba1.jpg"><div class="hizmet-icerik"><h3>Araç Koltuğu Yıkama</h3><p>Detaylı iç mekan hijyeni ve ferahlık.</p></div></div>
+        <div class="hizmet-kart"><img src="sandalye1.jpg"><div class="hizmet-icerik"><h3>Sandalye & Döşeme</h3><p>Ofis ve ev sandalyeleri için derinlemesine temizlik.</p></div></div>
     </div>
 </section>
 
+<!-- BÖLGE LİSTESİ -->
 <section id="bolgeler" style="background: white;">
-    <h2 style="font-size: 2.2em; color: #002a5c;">Hizmet Bölgelerimiz</h2>
-    <div class="tag">Bağcılar</div> <div class="tag">Esenler</div> <div class="tag">Güngören</div> 
-    <div class="tag">Bahçelievler</div> <div class="tag">Bakırköy</div> <div class="tag">Zeytinburnu</div> 
-    <div class="tag">Küçükçekmece</div> <div class="tag">Başakşehir</div> <div class="tag">Avcılar</div>
+    <h2 class="section-title">Hizmet Bölgelerimiz</h2>
+    <div class="bolge-wrapper">
+        <div class="bolge-column">
+            <h3>Avrupa Yakası</h3>
+            <div class="tag-container">
+                <span class="tag">Bağcılar</span> <span class="tag">Esenler</span> <span class="tag">Güngören</span> <span class="tag">Bahçelievler</span> 
+                <span class="tag">Bakırköy</span> <span class="tag">Zeytinburnu</span> <span class="tag">Küçükçekmece</span> <span class="tag">Başakşehir</span>
+                <span class="tag">Avcılar</span> <span class="tag">Beylikdüzü</span> <span class="tag">Esenyurt</span> <span class="tag">Beşiktaş</span>
+            </div>
+        </div>
+        <div class="bolge-column">
+            <h3>Anadolu Yakası</h3>
+            <div class="tag-container">
+                <span class="tag">Üsküdar</span> <span class="tag">Ümraniye</span> <span class="tag">Ataşehir</span> <span class="tag">Kadıköy</span>
+                <span class="tag">Maltepe</span> <span class="tag">Kartal</span> <span class="tag">Pendik</span> <span class="tag">Çekmeköy</span>
+                <span class="tag">Sancaktepe</span> <span class="tag">Beykoz</span>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="iletisim">
-    <h2 style="font-size: 2.2em; color: #002a5c;">İletişim</h2>
-    <a href="tel:05055984487" style="font-size: 2.5em; color: #0056b3; font-weight: bold; text-decoration: none;">0505 598 44 87</a>
-</section>
-
+<!-- WHATSAPP -->
 <a href="https://wa.me" class="wa-float" target="_blank">
     <img src="whatsapp.png" alt="WhatsApp">
 </a>
@@ -133,5 +153,3 @@
 
 </body>
 </html>
-
-
